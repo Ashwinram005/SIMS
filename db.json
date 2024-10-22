@@ -83,45 +83,6 @@
       "registerNumber": "727723EUIT056"
     },
     {
-      "id": "f11e",
-      "name": "VETRIMAARAN",
-      "dob": "2005-10-28",
-      "gender": "male",
-      "department": "aids",
-      "mobilenumber": "9876543210",
-      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
-      "email": "ashwinrammohan2005@gmail.com",
-      "enrollmentDate": "2005-09-04",
-      "yearOfStudy": "3",
-      "registerNumber": "727723EUAIDS070"
-    },
-    {
-      "id": "7c81",
-      "name": "MAARAN",
-      "dob": "2005-10-28",
-      "gender": "male",
-      "department": "csd",
-      "mobilenumber": "9876543210",
-      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
-      "email": "ashwinrammohan2005@gmail.com",
-      "enrollmentDate": "2023-09-04",
-      "yearOfStudy": "1",
-      "registerNumber": "727723EUCSDS035"
-    },
-    {
-      "id": "049d",
-      "name": "VELU",
-      "dob": "2005-10-28",
-      "gender": "male",
-      "department": "mech",
-      "mobilenumber": "9876543210",
-      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
-      "email": "ashwinrammohan2005@gmail.com",
-      "enrollmentDate": "2023-09-04",
-      "yearOfStudy": "1",
-      "registerNumber": "727723EUMECH075"
-    },
-    {
       "id": "d8f5",
       "name": "VIJAY",
       "dob": "1974-06-22",
@@ -135,17 +96,95 @@
       "registerNumber": "727723EUCIVIL069"
     },
     {
-      "id": "878d",
-      "name": "AJITH",
-      "dob": "1970-02-01",
+      "id": "0197",
+      "name": "VETRIMAARAN",
+      "dob": "2005-10-28",
       "gender": "male",
-      "department": "cse(cy)",
+      "department": "civil",
+      "mobilenumber": "9876543210",
+      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
+      "email": "ashwinrammohan2005@gmail.com",
+      "enrollmentDate": "2023-04-03",
+      "yearOfStudy": "3",
+      "registerNumber": "2023-CIVIL-9270"
+    },
+    {
+      "id": "fad1",
+      "name": "AJITH",
+      "dob": "2006-03-26",
+      "gender": "male",
+      "department": "mech",
+      "mobilenumber": "",
+      "address": "",
+      "email": "",
+      "enrollmentDate": "2023-09-09",
+      "yearOfStudy": "2",
+      "registerNumber": "2023-MECH-2830"
+    },
+    {
+      "id": "61cb",
+      "name": "surya",
+      "dob": "2005-10-28",
+      "gender": "male",
+      "department": "aids",
+      "mobilenumber": "",
+      "address": "",
+      "email": "",
+      "enrollmentDate": "2023-09-04",
+      "yearOfStudy": "1",
+      "registerNumber": "2023-AIDS-4127"
+    },
+    {
+      "id": "c26d",
+      "name": "NIVETHA",
+      "dob": "2004-09-20",
+      "gender": "female",
+      "department": "cse",
+      "mobilenumber": "9876543210",
+      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
+      "email": "ashwinrammohan2005@gmail.com",
+      "enrollmentDate": "2023-09-09",
+      "yearOfStudy": "3",
+      "registerNumber": "2023-CSE-6099"
+    },
+    {
+      "id": "89e2",
+      "name": "MUGESH KANNAN J",
+      "dob": "2005-10-27",
+      "gender": "male",
+      "department": "cse",
       "mobilenumber": "9876543210",
       "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
       "email": "ashwinrammohan2005@gmail.com",
       "enrollmentDate": "2023-09-04",
-      "yearOfStudy": "3",
-      "registerNumber": "727723EUCSECY001"
+      "yearOfStudy": "2",
+      "registerNumber": "20233534cse3534"
+    },
+    {
+      "id": "f39a",
+      "name": "",
+      "dob": "",
+      "gender": "",
+      "department": "",
+      "mobilenumber": "",
+      "address": "",
+      "email": "",
+      "enrollmentDate": "",
+      "yearOfStudy": "",
+      "registerNumber": "52345234"
+    },
+    {
+      "id": "5dcb",
+      "name": "MUKUNDA",
+      "dob": "2005-05-14",
+      "gender": "male",
+      "department": "cse",
+      "mobilenumber": "9876543210",
+      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
+      "email": "ashwinrammohan2005@gmail.com",
+      "enrollmentDate": "2023-09-04",
+      "yearOfStudy": "2",
+      "registerNumber": "20239407cse9407"
     }
   ]
 }
