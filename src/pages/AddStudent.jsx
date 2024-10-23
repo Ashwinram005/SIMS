@@ -30,7 +30,7 @@ export const AddStudent = ({ onAddStudent }) => {
 
   const generateRegisterNumber = (enrollmentDate, department) => {
     const year = enrollmentDate.split('-')[0]; // Extracting year from the date
-    const departmentCode = department.substring(0, 3).toLowerCase(); // First three letters of department
+    const departmentCode = department.substring(0, department.length).toLowerCase(); // First three letters of department
     const randomDigits = Math.floor(1000 + Math.random() * 9000); // 4-digit random number
     return `${year}${randomDigits}${departmentCode}${randomDigits}`; // Format: 727723eucs021
   };

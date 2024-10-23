@@ -263,6 +263,32 @@
       "enrollmentDate": "2024-09-04",
       "yearOfStudy": "2",
       "registerNumber": "20241846cse1846"
+    },
+    {
+      "id": "578b",
+      "name": "ADITYA SUBRAMANIAN S",
+      "dob": "2005-06-10",
+      "gender": "male",
+      "department": "aids",
+      "mobilenumber": "9876543210",
+      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
+      "email": "ashwinrammohan2005@gmail.com",
+      "enrollmentDate": "2023-09-04",
+      "yearOfStudy": "4",
+      "registerNumber": "20232001aid2001"
+    },
+    {
+      "id": "e0fc",
+      "name": "DHAYANANDH A",
+      "dob": "2005-12-10",
+      "gender": "male",
+      "department": "aids",
+      "mobilenumber": "9876543210",
+      "address": "150C SIVAN KOVIL STREET,THOOTHUKUDI",
+      "email": "ashwinrammohan2005@gmail.com",
+      "enrollmentDate": "2023-09-04",
+      "yearOfStudy": "4",
+      "registerNumber": "20233003aids3003"
     }
   ]
 }

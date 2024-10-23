@@ -16,12 +16,12 @@ export const Navbar = ({ activeItem, setActiveItem }) => {
             <div className="relative">
                 <ul className={`navbar flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between md:static fixed top-14 right-0 bg-[#1b2431] md:bg-transparent h-full md:h-auto transition-transform duration-300 ease-in-out ${menuClicked ? 'translate-x-0' : 'translate-x-full'} md:translate-x-0`}>
                     {['ho', 'as', 'us', 'rs', 'vs', 'lo'].map((item, index) => {
-                        const labels = ['Home', 'Add Student', 'Edit Student', 'Remove Student', 'View Student', 'Log Out'];
+                        const labels = ['Home', 'Add Student', 'Edit Student', 'Remove Student', 'View Students', 'Log Out'];
                         return (
                             <li
                                 key={item}
                                 className={`list-none px-6 py-3 text-lg font-semibold cursor-pointer transition-colors duration-200 
-                                    ${activeItem === item ? 'text-[#00ffb3] font-bold' : 'text-white hover:text-[#00ffb3] hover:bg-[#2a2e38] rounded-lg'}`}
+                                    ${activeItem === item ? 'text-[#00ffb3] font-bold' : 'text-white hover:text-[#00b3a3] hover:bg-[#2a2e38] rounded-lg'}`} // Updated hover text color
                                 onClick={() => {
                                     setActiveItem(item);
                                     setMenuClicked(false);
