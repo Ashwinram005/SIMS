@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 import { departments } from './departments'; // Adjust the import path as needed
+import { FaEdit, FaTrash, FaClipboardList } from 'react-icons/fa';
 
 export const ViewStudents = ({ students }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -36,6 +38,7 @@ export const ViewStudents = ({ students }) => {
           value={selectedDepartment}
           onChange={e => setSelectedDepartment(e.target.value)}
         >
+          <option value="">All Departments</option>
           {departments.map(dept => (
             <option key={dept.value} value={dept.value}>
               {dept.label}
@@ -64,24 +67,34 @@ export const ViewStudents = ({ students }) => {
               <th className="px-2 py-2 md:px-4 md:py-4 text-left text-sm md:text-base">Register Number</th>
               <th className="px-2 py-2 md:px-4 md:py-4 text-left text-sm md:text-base">Name</th>
               <th className="px-2 py-2 md:px-4 md:py-4 text-left text-sm md:text-base">Department</th>
-              <th className="px-2 py-2 md:px-4 md:py-4 text-left text-sm md:text-base">Year</th>
-              <th className="px-2 py-2 md:px-4 md:py-4 text-left text-sm md:text-base">Email</th>
+              <th className="px-2 py-2 md:px-4 md:py-4 text-left text-sm md:text-base">Actions</th>
             </tr>
           </thead>
-          <tbody className="bg-gray-200 divide-y divide-gray-300 text-gray-800"> {/* Changed table body background color */}
+          <tbody className="bg-gray-200 divide-y divide-gray-300 text-gray-800">
             {filteredStudents.length > 0 ? (
               filteredStudents.map((student, index) => (
                 <tr key={student.id} className={`hover:bg-gray-300 transition duration-300 ${index % 2 === 0 ? 'bg-gray-200' : ''}`}>
                   <td className="border px-2 py-2 md:px-4 md:py-4 text-sm md:text-base">{student.registerNumber}</td>
                   <td className="border px-2 py-2 md:px-4 md:py-4 text-sm md:text-base">{student.name}</td>
                   <td className="border px-2 py-2 md:px-4 md:py-4 text-sm md:text-base">{student.department.toUpperCase()}</td>
-                  <td className="border px-2 py-2 md:px-4 md:py-4 text-sm md:text-base">{student.yearOfStudy}</td>
-                  <td className="border px-2 py-2 md:px-4 md:py-4 text-sm md:text-base">{student.email}</td>
+                  <td className="border px-2 py-2 md:px-4 md:py-4 text-sm md:text-base flex justify-center gap-2">
+                    <Link to={`/student/${student.id}`} title="View Details">
+                      <button className="flex items-center justify-center w-8 h-8 text-green-600 hover:text-green-800">
+                        <FaClipboardList />
+                      </button>
+                    </Link>
+                    <button className="flex items-center justify-center w-8 h-8 text-blue-600 hover:text-blue-800" title="Edit">
+                      <FaEdit />
+                    </button>
+                    <button className="flex items-center justify-center w-8 h-8 text-red-600 hover:text-red-800" title="Delete">
+                      <FaTrash />
+                    </button>
+                  </td>
                 </tr>
               ))
             ) : (
               <tr>
-                <td colSpan="5" className="text-center py-4">No students found</td>
+                <td colSpan="4" className="text-center py-4">No students found</td>
               </tr>
             )}
           </tbody>

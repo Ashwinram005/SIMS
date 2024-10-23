@@ -15,8 +15,8 @@ export const Navbar = ({ activeItem, setActiveItem }) => {
             <img src={simslogo} alt="Logo" className="h-10 w-10 bg-white rounded-lg border-2 border-black" />
             <div className="relative">
                 <ul className={`navbar flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between md:static fixed top-14 right-0 bg-[#1b2431] md:bg-transparent h-full md:h-auto transition-transform duration-300 ease-in-out ${menuClicked ? 'translate-x-0' : 'translate-x-full'} md:translate-x-0`}>
-                    {['ho', 'as', 'us', 'rs', 'vs', 'lo'].map((item, index) => {
-                        const labels = ['Home', 'Add Student', 'Edit Student', 'Remove Student', 'View Students', 'Log Out'];
+                    {['ho', 'as', 'vs', 'lo'].map((item, index) => {
+                        const labels = ['Home', 'Add Student', 'View Students', 'Log Out'];
                         return (
                             <li
                                 key={item}
