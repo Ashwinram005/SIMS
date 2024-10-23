@@ -16,6 +16,9 @@ export const AddStudent = ({ onAddStudent }) => {
     idProof: null,
   });
 
+  const [registerNumber, setRegisterNumber] = useState('');
+  const [showConfirmation, setShowConfirmation] = useState(false);
+
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
     if (type === 'file') {
@@ -32,12 +35,18 @@ export const AddStudent = ({ onAddStudent }) => {
     return `${year}${randomDigits}${departmentCode}${randomDigits}`; // Format: 727723eucs021
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     // Generate register number based on enrollment date and department
-    const registerNumber = generateRegisterNumber(formData.enrollmentDate, formData.department);
+    const generatedRegisterNumber = generateRegisterNumber(formData.enrollmentDate, formData.department);
+    setRegisterNumber(generatedRegisterNumber);
 
+    // Show confirmation modal
+    setShowConfirmation(true);
+  };
+
+  const handleConfirmAdd = async () => {
     // Create JSON object for student data
     const studentData = {
       name: formData.name,
@@ -49,14 +58,16 @@ export const AddStudent = ({ onAddStudent }) => {
       email: formData.email,
       enrollmentDate: formData.enrollmentDate,
       yearOfStudy: formData.yearOfStudy,
-      registerNumber: registerNumber, // Generated register number
+      registerNumber: registerNumber, // Use generated register number
     };
 
     try {
-      const response = await api.post("/students", studentData); // Send as JSON
+      const response = await api.post('/students', studentData); // Send as JSON
       if (response.status === 201) {
         alert('Student added successfully!');
         onAddStudent();
+
+        // Resetting the form data
         setFormData({
           name: '',
           dob: '',
@@ -70,6 +81,12 @@ export const AddStudent = ({ onAddStudent }) => {
           studentPhoto: null,
           idProof: null,
         });
+
+        // Reset file inputs separately using their DOM references
+        document.getElementById('studentPhoto').value = null;
+        document.getElementById('idProof').value = null;
+
+        setShowConfirmation(false); // Close confirmation modal
       } else {
         alert('Failed to add student.');
       }
@@ -79,11 +96,16 @@ export const AddStudent = ({ onAddStudent }) => {
     }
   };
 
+  const handleCancel = () => {
+    setShowConfirmation(false);
+  };
+
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200 p-6">
       <div className="w-full max-w-lg bg-white rounded-lg shadow-lg p-8 border border-gray-200">
         <h1 className="text-3xl font-extrabold text-blue-800 text-center mb-6">Add New Student</h1>
         <form className="space-y-6" onSubmit={handleSubmit}>
+          {/* All form fields here */}
           <div className="form-group">
             <label htmlFor="name" className="text-lg font-medium text-gray-700">Full Name:</label>
             <input
@@ -208,9 +230,9 @@ export const AddStudent = ({ onAddStudent }) => {
               required
               value={formData.yearOfStudy}
               onChange={handleChange}
-              className="w-full p-3 text-black border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              <option value="">Select Year</option>
+              <option value="">Select Year of Study</option>
               <option value="1">1st Year</option>
               <option value="2">2nd Year</option>
               <option value="3">3rd Year</option>
@@ -223,9 +245,9 @@ export const AddStudent = ({ onAddStudent }) => {
               type="file"
               id="studentPhoto"
               name="studentPhoto"
+              accept="image/*"
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-lg text-black"
-              required
+              className="w-full p-3 text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           <div className="form-group">
@@ -234,21 +256,54 @@ export const AddStudent = ({ onAddStudent }) => {
               type="file"
               id="idProof"
               name="idProof"
+              accept=".pdf"
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-lg text-black"
-              required
+              className="w-full p-3 text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-          <button
-            type="submit"
-            className="w-full p-3 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-          >
-            Add Student
-          </button>
+          <div className="form-group text-center">
+            <button
+              type="submit"
+              className="w-full py-3 px-6 text-white font-bold bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              Add Student
+            </button>
+          </div>
         </form>
       </div>
+
+      {/* Confirmation Modal */}
+      {showConfirmation && (
+  <div className="fixed inset-0 bg-gray-900 bg-opacity-60 flex items-center justify-center">
+    <div className="bg-white p-8 rounded-xl shadow-xl text-center max-w-md w-full">
+      <h2 className="text-3xl font-semibold mb-6 text-gray-800">Confirm Student Addition</h2>
+      <p className="mb-6 text-xl text-gray-600">
+        Generated Register Number: <strong className="text-indigo-600">{registerNumber}</strong>
+      </p>
+
+      {/* Custom message */}
+      <p className="mb-6 text-lg text-gray-700">
+        Are you sure you want to add this student with the details provided?
+      </p>
+
+      <div className="flex justify-around">
+        <button
+          className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-bold transition duration-300 ease-in-out"
+          onClick={handleConfirmAdd}
+        >
+          Confirm
+        </button>
+        <button
+          className="px-6 py-3 bg-gray-400 hover:bg-gray-500 text-white rounded-lg font-bold transition duration-300 ease-in-out"
+          onClick={handleCancel}
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
     </div>
   );
 };
-
-export default AddStudent;

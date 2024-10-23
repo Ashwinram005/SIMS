@@ -19,9 +19,9 @@ export const LandingPage = () => {
     }
   };
 
-  useEffect(() => {
-    fetchStudents(); // Fetch students on initial load
-  }, []);
+    useEffect(() => {
+      fetchStudents(); // Fetch students on initial load
+    }, []);
 
   // Function to add a new student
   const addStudent = async () => {

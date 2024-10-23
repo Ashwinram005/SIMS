@@ -1,17 +1,17 @@
 {
   "users": [
     {
-      "id": 1729530815044,
+      "id": "1729530815044",
       "username": "ss",
       "password": "aa"
     },
     {
-      "id": 1729530875642,
+      "id": "1729530875642",
       "username": "Ashwinram M",
       "password": "ashwin@2005"
     },
     {
-      "id": 1729535495493,
+      "id": "1729535495493",
       "username": "Gopal Chamy M",
       "password": "msd007"
     }
@@ -109,32 +109,6 @@
       "registerNumber": "2023-CIVIL-9270"
     },
     {
-      "id": "fad1",
-      "name": "AJITH",
-      "dob": "2006-03-26",
-      "gender": "male",
-      "department": "mech",
-      "mobilenumber": "",
-      "address": "",
-      "email": "",
-      "enrollmentDate": "2023-09-09",
-      "yearOfStudy": "2",
-      "registerNumber": "2023-MECH-2830"
-    },
-    {
-      "id": "61cb",
-      "name": "surya",
-      "dob": "2005-10-28",
-      "gender": "male",
-      "department": "aids",
-      "mobilenumber": "",
-      "address": "",
-      "email": "",
-      "enrollmentDate": "2023-09-04",
-      "yearOfStudy": "1",
-      "registerNumber": "2023-AIDS-4127"
-    },
-    {
       "id": "c26d",
       "name": "NIVETHA",
       "dob": "2004-09-20",
@@ -161,19 +135,6 @@
       "registerNumber": "20233534cse3534"
     },
     {
-      "id": "f39a",
-      "name": "",
-      "dob": "",
-      "gender": "",
-      "department": "",
-      "mobilenumber": "",
-      "address": "",
-      "email": "",
-      "enrollmentDate": "",
-      "yearOfStudy": "",
-      "registerNumber": "52345234"
-    },
-    {
       "id": "5dcb",
       "name": "MUKUNDA",
       "dob": "2005-05-14",
@@ -185,6 +146,123 @@
       "enrollmentDate": "2023-09-04",
       "yearOfStudy": "2",
       "registerNumber": "20239407cse9407"
+    },
+    {
+      "id": "44fc",
+      "name": "PARTHIBAN",
+      "dob": "2005-10-28",
+      "gender": "male",
+      "department": "cse",
+      "mobilenumber": "9876543210",
+      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
+      "email": "leo@das.com",
+      "enrollmentDate": "2005-09-09",
+      "yearOfStudy": "3",
+      "registerNumber": "20058026cse8026"
+    },
+    {
+      "id": "8cd6",
+      "name": "LEO",
+      "dob": "2005-10-28",
+      "gender": "male",
+      "department": "csbs",
+      "mobilenumber": "9876543210",
+      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
+      "email": "leo@das.com",
+      "enrollmentDate": "2023-09-09",
+      "yearOfStudy": "2",
+      "registerNumber": "20234593csb4593"
+    },
+    {
+      "id": "e22b",
+      "name": "SABESH MOORTHY",
+      "dob": "2005-10-28",
+      "gender": "male",
+      "department": "cse(cy)",
+      "mobilenumber": "9876543210",
+      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
+      "email": "leo@das.com",
+      "enrollmentDate": "2023-09-04",
+      "yearOfStudy": "2",
+      "registerNumber": "20233207cse3207"
+    },
+    {
+      "id": "090f",
+      "name": "MURALI PRAKASH",
+      "dob": "2005-09-30",
+      "gender": "male",
+      "department": "csd",
+      "mobilenumber": "9344809016",
+      "address": "smks",
+      "email": "ashwinrammohan2005@gmail.com",
+      "enrollmentDate": "2023-09-04",
+      "yearOfStudy": "3",
+      "registerNumber": "20237237csd7237"
+    },
+    {
+      "id": "1118",
+      "name": "DHANUSH",
+      "dob": "2005-10-28",
+      "gender": "male",
+      "department": "civil",
+      "mobilenumber": "9344809016",
+      "address": "smks",
+      "email": "ashwinrammohan2005@gmail.com",
+      "enrollmentDate": "2023-09-09",
+      "yearOfStudy": "2",
+      "registerNumber": "20234697civ4697"
+    },
+    {
+      "id": "b4ca",
+      "name": "a",
+      "dob": "0023-03-31",
+      "gender": "male",
+      "department": "ece",
+      "mobilenumber": "9344809016",
+      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
+      "email": "ashwinrammohan2005@gmail.com",
+      "enrollmentDate": "0232-03-23",
+      "yearOfStudy": "4",
+      "registerNumber": "02321943ece1943"
+    },
+    {
+      "id": "8f93",
+      "name": "SHAH RUKH KHAN",
+      "dob": "2005-10-28",
+      "gender": "male",
+      "department": "cse",
+      "mobilenumber": "9344809016",
+      "address": "smks",
+      "email": "ashwinrammohan2005@gmail.com",
+      "enrollmentDate": "2023-09-09",
+      "yearOfStudy": "1",
+      "registerNumber": "20234263cse4263"
+    },
+    {
+      "id": "0a48",
+      "name": "BARATH HARIHARAN K",
+      "dob": "2004-08-26",
+      "gender": "male",
+      "department": "cse",
+      "mobilenumber": "9500652366",
+      "address": "150C SIVAN KOVIL STREET,THOOTHUKUDI",
+      "email": "barathhariharan460@gmail.com",
+      "enrollmentDate": "2023-09-04",
+      "yearOfStudy": "2",
+      "registerNumber": "20231148cse1148"
+    },
+    {
+      "id": "234e",
+      "name": "AADHARSH R",
+      "dob": "2006-06-10",
+      "gender": "male",
+      "department": "cse",
+      "mobilenumber": "9344809016",
+      "address": "smks",
+      "email": "ashwinrammohan2005@gmail.com",
+      "enrollmentDate": "2024-09-04",
+      "yearOfStudy": "2",
+      "registerNumber": "20241846cse1846"
     }
   ]
 }
