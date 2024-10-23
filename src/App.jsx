@@ -4,6 +4,8 @@ import { Signup } from "./pages/Signup"
 import { LandingPage } from "./pages/Landingpage"
 import { StudentDetails } from "./pages/StudentDetails"  
 import { useState } from "react"
+import { DeleteStudent } from "./pages/DeleteStudent"
+import EditStudent from "./pages/EditStudent"
 
 function App() {
   const [activeItem, setActiveItem] = useState('ho');
@@ -14,7 +16,9 @@ function App() {
               <Route path="/" element={<Login/>}/>
               <Route path="/signup" element={<Signup/>}/>
               <Route path="/landing" element={<LandingPage activeItem={activeItem} setActiveItem={setActiveItem}/>}/>
-              <Route path="/student/:id" element={<StudentDetails setActiveItem={setActiveItem}/>} />
+              <Route path="/studentdetail/:id" element={<StudentDetails setActiveItem={setActiveItem}/>} />
+              <Route path="/studentdelete/:id" element={<DeleteStudent setActiveItem={setActiveItem}/>} />
+              <Route path="/studentedit/:id" element={<EditStudent setActiveItem={setActiveItem}/>} />
           </Routes>
       </Router>
     </>

@@ -18,19 +18,6 @@
   ],
   "students": [
     {
-      "id": "9602",
-      "name": "ASHWINRAM M",
-      "dob": "2005-10-28",
-      "gender": "male",
-      "department": "cse",
-      "mobilenumber": "9344809016",
-      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
-      "email": "ashwinrammohan2005@gmail.com",
-      "enrollmentDate": "2023-09-04",
-      "yearOfStudy": "2",
-      "registerNumber": "727723EUCS021"
-    },
-    {
       "id": "c8e1",
       "name": "GOPAL CHAMY M",
       "dob": "2006-01-06",
@@ -148,42 +135,16 @@
       "registerNumber": "20239407cse9407"
     },
     {
-      "id": "44fc",
-      "name": "PARTHIBAN",
-      "dob": "2005-10-28",
-      "gender": "male",
-      "department": "cse",
-      "mobilenumber": "9876543210",
-      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
-      "email": "leo@das.com",
-      "enrollmentDate": "2005-09-09",
-      "yearOfStudy": "3",
-      "registerNumber": "20058026cse8026"
-    },
-    {
-      "id": "8cd6",
-      "name": "LEO",
-      "dob": "2005-10-28",
-      "gender": "male",
-      "department": "csbs",
-      "mobilenumber": "9876543210",
-      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
-      "email": "leo@das.com",
-      "enrollmentDate": "2023-09-09",
-      "yearOfStudy": "2",
-      "registerNumber": "20234593csb4593"
-    },
-    {
       "id": "e22b",
       "name": "SABESH MOORTHY",
       "dob": "2005-10-28",
       "gender": "male",
-      "department": "cse(cy)",
-      "mobilenumber": "9876543210",
+      "department": "civil",
+      "mobilenumber": "9876543211",
       "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
-      "email": "leo@das.com",
+      "email": "leo@das.co",
       "enrollmentDate": "2023-09-04",
-      "yearOfStudy": "2",
+      "yearOfStudy": "1",
       "registerNumber": "20233207cse3207"
     },
     {
@@ -198,45 +159,6 @@
       "enrollmentDate": "2023-09-04",
       "yearOfStudy": "3",
       "registerNumber": "20237237csd7237"
-    },
-    {
-      "id": "1118",
-      "name": "DHANUSH",
-      "dob": "2005-10-28",
-      "gender": "male",
-      "department": "civil",
-      "mobilenumber": "9344809016",
-      "address": "smks",
-      "email": "ashwinrammohan2005@gmail.com",
-      "enrollmentDate": "2023-09-09",
-      "yearOfStudy": "2",
-      "registerNumber": "20234697civ4697"
-    },
-    {
-      "id": "b4ca",
-      "name": "a",
-      "dob": "0023-03-31",
-      "gender": "male",
-      "department": "ece",
-      "mobilenumber": "9344809016",
-      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
-      "email": "ashwinrammohan2005@gmail.com",
-      "enrollmentDate": "0232-03-23",
-      "yearOfStudy": "4",
-      "registerNumber": "02321943ece1943"
-    },
-    {
-      "id": "8f93",
-      "name": "SHAH RUKH KHAN",
-      "dob": "2005-10-28",
-      "gender": "male",
-      "department": "cse",
-      "mobilenumber": "9344809016",
-      "address": "smks",
-      "email": "ashwinrammohan2005@gmail.com",
-      "enrollmentDate": "2023-09-09",
-      "yearOfStudy": "1",
-      "registerNumber": "20234263cse4263"
     },
     {
       "id": "0a48",
@@ -289,6 +211,45 @@
       "enrollmentDate": "2023-09-04",
       "yearOfStudy": "4",
       "registerNumber": "20233003aids3003"
+    },
+    {
+      "id": "cfcd",
+      "name": "ASHWINRAM M",
+      "dob": "2005-10-28",
+      "gender": "male",
+      "department": "cse",
+      "mobilenumber": "9344809016",
+      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
+      "email": "ashwinrammohan2005@gmail.com",
+      "enrollmentDate": "2023-09-04",
+      "yearOfStudy": "2",
+      "registerNumber": "20239537cse9537"
+    },
+    {
+      "id": "8b16",
+      "name": "AJITH",
+      "dob": "2332-03-23",
+      "gender": "male",
+      "department": "csbs",
+      "mobilenumber": "9876543210",
+      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
+      "email": "ashwinrammohan2005@gmail.com",
+      "enrollmentDate": "0012-02-21",
+      "yearOfStudy": "2",
+      "registerNumber": "00128062csbs8062"
+    },
+    {
+      "id": "2b9c",
+      "name": "VIJAY ",
+      "dob": "2005-10-28",
+      "gender": "male",
+      "department": "cse",
+      "mobilenumber": "9344809016",
+      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
+      "email": "ashwinrammohan2005@gmail.com",
+      "enrollmentDate": "2023-09-04",
+      "yearOfStudy": "1",
+      "registerNumber": "20238755cse8755"
     }
   ]
 }

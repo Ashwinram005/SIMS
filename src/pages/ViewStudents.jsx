@@ -64,31 +64,35 @@ export const ViewStudents = ({ students }) => {
         <table className="min-w-full divide-y divide-gray-300">
           <thead className="bg-blue-600 text-white">
             <tr>
-              <th className="px-2 py-2 md:px-4 md:py-4 text-left text-sm md:text-base">Register Number</th>
-              <th className="px-2 py-2 md:px-4 md:py-4 text-left text-sm md:text-base">Name</th>
-              <th className="px-2 py-2 md:px-4 md:py-4 text-left text-sm md:text-base">Department</th>
-              <th className="px-2 py-2 md:px-4 md:py-4 text-left text-sm md:text-base">Actions</th>
+              <th className="px-2 py-2 md:px-4 md:py-4 text-center text-sm md:text-base">Register Number</th>
+              <th className="px-2 py-2 md:px-4 md:py-4 text-center text-sm md:text-base">Name</th>
+              <th className="px-2 py-2 md:px-4 md:py-4 text-center text-sm md:text-base">Department</th>
+              <th className="px-2 py-2 md:px-4 md:py-4 text-center text-sm md:text-base">Actions</th>
             </tr>
           </thead>
           <tbody className="bg-gray-200 divide-y divide-gray-300 text-gray-800">
             {filteredStudents.length > 0 ? (
               filteredStudents.map((student, index) => (
                 <tr key={student.id} className={`hover:bg-gray-300 transition duration-300 ${index % 2 === 0 ? 'bg-gray-200' : ''}`}>
-                  <td className="border px-2 py-2 md:px-4 md:py-4 text-sm md:text-base">{student.registerNumber}</td>
-                  <td className="border px-2 py-2 md:px-4 md:py-4 text-sm md:text-base">{student.name}</td>
-                  <td className="border px-2 py-2 md:px-4 md:py-4 text-sm md:text-base">{student.department.toUpperCase()}</td>
-                  <td className="border px-2 py-2 md:px-4 md:py-4 text-sm md:text-base flex justify-center gap-2">
-                    <Link to={`/student/${student.id}`} title="View Details">
+                  <td className="border px-2 py-2 md:px-4 md:py-4 text-center text-sm md:text-base">{student.registerNumber}</td>
+                  <td className="border px-2 py-2 md:px-4 md:py-4 text-center text-sm md:text-base">{student.name}</td>
+                  <td className="border px-2 py-2 md:px-4 md:py-4 text-center text-sm md:text-base">{student.department.toUpperCase()}</td>
+                  <td className="border px-2 py-2 md:px-4 md:py-4 text-centertext-sm md:text-base flex justify-center gap-2">
+                    <Link to={`/studentdetail/${student.id}`} title="View Details">
                       <button className="flex items-center justify-center w-8 h-8 text-green-600 hover:text-green-800">
                         <FaClipboardList />
                       </button>
                     </Link>
-                    <button className="flex items-center justify-center w-8 h-8 text-blue-600 hover:text-blue-800" title="Edit">
-                      <FaEdit />
-                    </button>
-                    <button className="flex items-center justify-center w-8 h-8 text-red-600 hover:text-red-800" title="Delete">
-                      <FaTrash />
-                    </button>
+                    <Link to={`/studentedit/${student.id}`} title="Edit Student">
+                      <button className="flex items-center justify-center w-8 h-8 text-blue-600 hover:text-blue-800" title="Edit">
+                        <FaEdit />
+                      </button>
+                    </Link>
+                    <Link to={`/studentdelete/${student.id}`} title="Student delete" >
+                      <button className="flex items-center justify-center w-8 h-8 text-red-600 hover:text-red-800" title="Delete">
+                        <FaTrash />
+                      </button>
+                    </Link>
                   </td>
                 </tr>
               ))

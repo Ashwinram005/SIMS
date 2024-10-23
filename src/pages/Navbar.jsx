@@ -16,7 +16,7 @@ export const Navbar = ({ activeItem, setActiveItem }) => {
             <div className="relative">
                 <ul className={`navbar flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between md:static fixed top-14 right-0 bg-[#1b2431] md:bg-transparent h-full md:h-auto transition-transform duration-300 ease-in-out ${menuClicked ? 'translate-x-0' : 'translate-x-full'} md:translate-x-0`}>
                     {['ho', 'as', 'vs', 'lo'].map((item, index) => {
-                        const labels = ['Home', 'Add Student', 'View Students', 'Log Out'];
+                        const labels = ['Home', 'Add Student', 'Manage Students', 'Log Out'];
                         return (
                             <li
                                 key={item}

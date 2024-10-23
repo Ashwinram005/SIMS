@@ -49,10 +49,10 @@ export const StudentDetails = ({ setActiveItem }) => {
           <p className="text-lg text-gray-700"><strong>Name:</strong> {student.name}</p>
           <p className="text-lg text-gray-700"><strong>Department:</strong> <span className="text-blue-600">{student.department.toUpperCase()}</span></p>
           <p className="text-lg text-gray-700"><strong>DOB:</strong> {student.dob}</p>
-          <p className="text-lg text-gray-700"><strong>Gender:</strong> {student.gender}</p>
+          <p className="text-lg text-gray-700"><strong>Gender:</strong> {student.gender.toUpperCase()}</p>
           <p className="text-lg text-gray-700"><strong>Mobile Number:</strong> {student.mobilenumber}</p>
           <p className="text-lg text-gray-700"><strong>Email:</strong> <span className="text-blue-600">{student.email}</span></p>
-          <p className="text-lg text-gray-700"><strong>Address:</strong> {student.address}</p>
+          <p className="text-lg text-gray-700"><strong>Address:</strong> {student.address.toUpperCase()}</p>
           <p className="text-lg text-gray-700"><strong>Enrollment Date:</strong> {student.enrollmentDate}</p>
           <p className="text-lg text-gray-700"><strong>Year of Study:</strong> {student.yearOfStudy}</p>
         </div>

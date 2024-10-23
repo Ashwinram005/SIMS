@@ -11,6 +11,7 @@ export const Home = () => {
   const [students, setStudents] = useState([]);
   const [totalStudents, setTotalStudents] = useState(0);
   const [departmentCounts, setDepartmentCounts] = useState({});
+  const [yearCounts, setYearCounts] = useState({}); // State for year-wise counts
   const [recentStudent, setRecentStudent] = useState(null); // State for the recent student
 
   useEffect(() => {
@@ -27,14 +28,26 @@ export const Home = () => {
             return acc;
           }, {});
 
+          // Initialize year counts
+          const yrCounts = {};
+
           response.data.forEach(student => {
             const dept = student.department || '';
             if (deptCounts.hasOwnProperty(dept)) {
               deptCounts[dept] += 1;
             }
+
+            // Count students by year of study
+            const year = student.yearOfStudy || 'Unknown';
+            if (yrCounts[year]) {
+              yrCounts[year] += 1;
+            } else {
+              yrCounts[year] = 1;
+            }
           });
 
           setDepartmentCounts(deptCounts);
+          setYearCounts(yrCounts); // Set year counts
 
           // Set the recent student to the last student in the array
           if (response.data.length > 0) {
@@ -44,6 +57,7 @@ export const Home = () => {
           console.error('Students data is not in the expected format:', response.data);
           setTotalStudents(0);
           setDepartmentCounts({});
+          setYearCounts({});
         }
       } catch (error) {
         console.error('Error fetching student data:', error);
@@ -77,36 +91,54 @@ export const Home = () => {
           </div>
         )}
       </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {departments
-          .filter(department => department.value !== '')
-          .map(({ value, label }, index) => {
-            const icons = {
-              cse: <RiComputerLine />,        // CSE
-              ece: <RiBatteryChargeLine />,   // ECE
-              eee: <RiToolsLine />,           // EEE
-              it: <SiPython />,               // IT
-              mech: <MdConstruction />,       // Mechanical
-              mct: <GiRobotGolem />,          // Mechatronics (MCT)
-              aids: <GiArtificialIntelligence />,  // AI and Data Science
-              csd: <SiPostgresql />,          // CSD
-              civil: <MdOutlineArchitecture />, // Civil Engineering
-              csbs: <GiBrain />,              // CSBS
-              'cse(cy)': <GiLockedFortress /> // CSE(CY) - Cyber Security
-            };
-
-            return (
-              <div
+      
+      <div className="mt-8 mb-8">
+        <h2 className="text-2xl font-semibold mb-4">Year-wise Student Count</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {Object.entries(yearCounts).map(([year, count]) => (
+            <div 
+              key={year} 
+              className={`p-6 rounded-lg shadow-md transition-shadow duration-300 flex flex-col items-center hover:shadow-lg ${getYearColor(year)}`}
+            >
+              <h3 className="text-lg font-semibold mb-2">Year {year}</h3>
+              <p className="text-3xl font-bold">{count}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <div className="mt-8 mb-8">
+        <h2 className="text-2xl font-semibold mb-4">Department-wise Student Count</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {departments
+            .filter(department => department.value !== '')
+            .map(({ value, label }, index) => {
+              const icons = {
+                cse: <RiComputerLine />,        // CSE
+                ece: <RiBatteryChargeLine />,   // ECE
+                eee: <RiToolsLine />,           // EEE
+                it: <SiPython />,               // IT
+                mech: <MdConstruction />,       // Mechanical
+                mct: <GiRobotGolem />,          // Mechatronics (MCT)
+                aids: <GiArtificialIntelligence />,  // AI and Data Science
+                csd: <SiPostgresql />,          // CSD
+                civil: <MdOutlineArchitecture />, // Civil Engineering
+                csbs: <GiBrain />,              // CSBS
+                'cse(cy)': <GiLockedFortress /> // CSE(CY) - Cyber Security
+              };
+              
+              return (
+                <div
                 key={value}
                 className={`p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-white ${getColor(value)} ${index === departments.length - 1 ? 'mx-auto col-span-full' : ''}`} // Centering the last department
-              >
-                <h3 className="text-lg md:text-xl font-semibold mb-2">{label}</h3>
-                <div className="text-4xl mb-2">{icons[value]}</div> {/* Display the icon */}
-                <p className="text-2xl font-bold mt-2">{departmentCounts[value] || 0}</p>
-              </div>
-            );
-          })}
+                >
+                  <h3 className="text-lg md:text-xl font-semibold mb-2">{label}</h3>
+                  <div className="text-4xl mb-2">{icons[value]}</div> {/* Display the icon */}
+                  <p className="text-2xl font-bold mt-2">{departmentCounts[value] || 0}</p>
+                </div>
+              );
+            })}
+        </div>
       </div>
 
       <footer className="mt-8 text-center">
@@ -143,6 +175,16 @@ export const Home = () => {
         return 'bg-gray-400';
     }
   }
-};
 
-export default Home;
+  function getYearColor(year) {
+    const colors = {
+      '1': 'bg-red-300',     // Color for Year 1
+      '2': 'bg-orange-300',  // Color for Year 2
+      '3': 'bg-yellow-300',  // Color for Year 3
+      '4': 'bg-green-300',   // Color for Year 4
+      '5': 'bg-blue-300',    // Color for Year 5
+      'Unknown': 'bg-gray-300' // Color for Unknown
+    };
+    return colors[year] || 'bg-gray-400'; // Default color
+  }
+};
