@@ -10,7 +10,7 @@ import EditStudent from "./pages/EditStudent";
 export const AppContext = createContext();
 
 function App() {
-  const savedActiveItem = localStorage.getItem('activeItem') || 'ho'; // Default to 'ho' if not found
+  const savedActiveItem = localStorage.getItem('activeItem')
   const [activeItem, setActiveItem] = useState(savedActiveItem);
   useEffect(() => {
     localStorage.setItem('activeItem', activeItem);
