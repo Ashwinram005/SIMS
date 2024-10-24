@@ -25,8 +25,7 @@ export const Login = () => {
       if (user) {
         setInvalid(false);
         setActiveItem('ho');
-        // localStorage.setItem('activeItem', 'ho');
-        navigate('/landing'); // Redirect to landing page
+        navigate('/landing');
       } else {
         setInvalid(true);
       }

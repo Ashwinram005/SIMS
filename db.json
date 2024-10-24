@@ -36,19 +36,6 @@
       "registerNumber": "727723EUCS062"
     },
     {
-      "id": "f94c",
-      "name": "SANJAY",
-      "dob": "1974-01-22",
-      "gender": "male",
-      "department": "cse",
-      "mobilenumber": "9876543210",
-      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
-      "email": "ashwinrammohan2005@gmail.com",
-      "enrollmentDate": "2023-09-04",
-      "yearOfStudy": "4",
-      "registerNumber": "727723EUCS069"
-    },
-    {
       "id": "b0f6",
       "name": "JEEVAN",
       "dob": "2005-10-28",
@@ -255,6 +242,19 @@
       "enrollmentDate": "2023-09-04",
       "yearOfStudy": "1",
       "registerNumber": "20239201mct9201"
+    },
+    {
+      "id": "5c47",
+      "name": "HARIVARADHAN N R",
+      "dob": "2005-11-05",
+      "gender": "male",
+      "department": "cse(cy)",
+      "mobilenumber": "9344809016",
+      "address": "smks",
+      "email": "ashwinrammohan2005@gmail.com",
+      "enrollmentDate": "2023-09-04",
+      "yearOfStudy": "2",
+      "registerNumber": "20237690cse(cy)7690"
     }
   ]
 }
