@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useState ,useContext} from 'react';
 import api from '../api/info';
+import { navStudentContext } from './Landingpage';
 
-export const AddStudent = ({ onAddStudent }) => {
+export const AddStudent = () => {
+  const { addStudent } = useContext(navStudentContext);
   const [formData, setFormData] = useState({
     name: '',
     dob: '',
@@ -65,7 +67,7 @@ export const AddStudent = ({ onAddStudent }) => {
       const response = await api.post('/students', studentData); // Send as JSON
       if (response.status === 201) {
         alert('Student added successfully!');
-        onAddStudent();
+        addStudent();
 
         // Resetting the form data
         setFormData({

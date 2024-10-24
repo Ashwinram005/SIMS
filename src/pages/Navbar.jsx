@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import simslogo from '../assets/student-management-8-512.png';
+import { navStudentContext } from './Landingpage';
 
-export const Navbar = ({ activeItem, setActiveItem }) => {
+export const Navbar = () => {
+    const { activeItem, setActiveItem } = useContext(navStudentContext);
     const [menuClicked, setMenuClicked] = useState(false);
     const navigate = useNavigate(); 
 

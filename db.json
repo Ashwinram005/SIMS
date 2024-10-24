@@ -1,11 +1,6 @@
 {
   "users": [
     {
-      "id": "1729530815044",
-      "username": "ss",
-      "password": "aa"
-    },
-    {
       "id": "1729530875642",
       "username": "Ashwinram M",
       "password": "ashwin@2005"
@@ -14,6 +9,16 @@
       "id": "1729535495493",
       "username": "Gopal Chamy M",
       "password": "msd007"
+    },
+    {
+      "id": "1729718113034",
+      "username": "VIJAY",
+      "password": "T69"
+    },
+    {
+      "id": "1729737049267",
+      "username": "MURUGAPRAKASH S",
+      "password": "123"
     }
   ],
   "students": [
@@ -135,19 +140,6 @@
       "registerNumber": "20239407cse9407"
     },
     {
-      "id": "e22b",
-      "name": "SABESH MOORTHY",
-      "dob": "2005-10-28",
-      "gender": "male",
-      "department": "civil",
-      "mobilenumber": "9876543211",
-      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
-      "email": "leo@das.co",
-      "enrollmentDate": "2023-09-04",
-      "yearOfStudy": "1",
-      "registerNumber": "20233207cse3207"
-    },
-    {
       "id": "090f",
       "name": "MURALI PRAKASH",
       "dob": "2005-09-30",
@@ -243,13 +235,26 @@
       "name": "VIJAY ",
       "dob": "2005-10-28",
       "gender": "male",
-      "department": "cse",
+      "department": "mech",
       "mobilenumber": "9344809016",
       "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
       "email": "ashwinrammohan2005@gmail.com",
       "enrollmentDate": "2023-09-04",
-      "yearOfStudy": "1",
+      "yearOfStudy": "2",
       "registerNumber": "20238755cse8755"
+    },
+    {
+      "id": "8017",
+      "name": "ROLEX",
+      "dob": "2005-10-28",
+      "gender": "male",
+      "department": "mct",
+      "mobilenumber": "9876543210",
+      "address": "150C SIVAN KOVIL STREET,THOOTHUKUDI",
+      "email": "ashwinrammohan2005@gmail.com",
+      "enrollmentDate": "2023-09-04",
+      "yearOfStudy": "1",
+      "registerNumber": "20239201mct9201"
     }
   ]
 }

@@ -3,24 +3,32 @@ import { Login } from "./pages/Login"
 import { Signup } from "./pages/Signup"
 import { LandingPage } from "./pages/Landingpage"
 import { StudentDetails } from "./pages/StudentDetails"  
-import { useState } from "react"
+import { createContext, useEffect, useState } from "react"
 import { DeleteStudent } from "./pages/DeleteStudent"
-import EditStudent from "./pages/EditStudent"
+import EditStudent from "./pages/EditStudent";
+
+export const AppContext = createContext();
 
 function App() {
-  const [activeItem, setActiveItem] = useState('ho');
+  const savedActiveItem = localStorage.getItem('activeItem') || 'ho'; // Default to 'ho' if not found
+  const [activeItem, setActiveItem] = useState(savedActiveItem);
+  useEffect(() => {
+    localStorage.setItem('activeItem', activeItem);
+  }, [activeItem]);
   return (
     <>
-      <Router>
-          <Routes>
-              <Route path="/" element={<Login/>}/>
-              <Route path="/signup" element={<Signup/>}/>
-              <Route path="/landing" element={<LandingPage activeItem={activeItem} setActiveItem={setActiveItem}/>}/>
-              <Route path="/studentdetail/:id" element={<StudentDetails setActiveItem={setActiveItem}/>} />
-              <Route path="/studentdelete/:id" element={<DeleteStudent setActiveItem={setActiveItem}/>} />
-              <Route path="/studentedit/:id" element={<EditStudent setActiveItem={setActiveItem}/>} />
-          </Routes>
-      </Router>
+      <AppContext.Provider value={{ activeItem, setActiveItem }}>
+        <Router>
+            <Routes>
+                <Route path="/" element={<Login/>}/>
+                <Route path="/signup" element={<Signup/>}/>
+                <Route path="/landing" element={<LandingPage/>}/>
+                <Route path="/studentdetail/:id" element={<StudentDetails/>} />
+                <Route path="/studentdelete/:id" element={<DeleteStudent/>} />
+                <Route path="/studentedit/:id" element={<EditStudent />} />
+            </Routes>
+        </Router>
+      </AppContext.Provider>
     </>
   )
 }

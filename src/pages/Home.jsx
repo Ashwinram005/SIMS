@@ -29,7 +29,7 @@ export const Home = () => {
           }, {});
 
           // Initialize year counts
-          const yrCounts = {};
+          const yrCounts = { 1: 0, 2: 0, 3: 0, 4: 0};
 
           response.data.forEach(student => {
             const dept = student.department || '';

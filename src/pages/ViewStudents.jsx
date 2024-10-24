@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import { departments } from './departments'; // Adjust the import path as needed
 import { FaEdit, FaTrash, FaClipboardList } from 'react-icons/fa';
+import { navStudentContext } from './Landingpage';
 
-export const ViewStudents = ({ students }) => {
+export const ViewStudents = () => {
+  const { students } = useContext(navStudentContext);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('');
   const [selectedYear, setSelectedYear] = useState('');

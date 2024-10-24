@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import api from '../api/info'; // Your API module for making requests
+import { AppContext } from '../App';
 
-const EditStudent = ({ setActiveItem }) => {
+const EditStudent = () => {
+  const { setActiveItem } = useContext(AppContext);
   const { id } = useParams();
   const navigate = useNavigate();
   const [originalStudent, setOriginalStudent] = useState(null);

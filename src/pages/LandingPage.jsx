@@ -1,12 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect ,useContext, createContext} from 'react';
 import { Navbar } from './Navbar';
 import { AddStudent } from './AddStudent';
 import { ViewStudents } from './ViewStudents';
 import { Home } from './Home';
 import api from '../api/info';
+import { AppContext } from '../App';
 
-export const LandingPage = ({activeItem,setActiveItem}) => {
-  // const [activeItem, setActiveItem] = useState('ho'); // Default state to Home
+export const navStudentContext = createContext(); 
+
+export const LandingPage = () => {
+  const { activeItem, setActiveItem } = useContext(AppContext);
   const [students, setStudents] = useState([]);
 
   // Fetch initial student data from JSON Server
@@ -34,16 +37,18 @@ export const LandingPage = ({activeItem,setActiveItem}) => {
   };
 
   return (
+    <navStudentContext.Provider value={{ students,addStudent,activeItem, setActiveItem}}>
     <div className="min-h-screen bg-gray-800 text-white flex flex-col items-center">
-      <Navbar activeItem={activeItem} setActiveItem={setActiveItem} />
+      <Navbar/>
       <div className="w-full mt-16">
         {
           activeItem === 'ho' ? <Home /> :
-          activeItem === 'as' ? <AddStudent onAddStudent={addStudent} /> :
-          activeItem === 'vs' ? <ViewStudents students={students} /> :
-          null // Add a fallback value here
+          activeItem === 'as' ? <AddStudent/> :
+          activeItem === 'vs' ? <ViewStudents/> :
+          null 
         }
       </div>
     </div>
+    </navStudentContext.Provider>
   );
 };

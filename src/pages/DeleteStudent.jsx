@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import api from '../api/info';
+import { AppContext } from '../App';
 
-export const DeleteStudent = ({ setActiveItem }) => {
+export const DeleteStudent = () => {
+  const { setActiveItem } = useContext(AppContext);
   const { id } = useParams();
   const [student, setStudent] = useState(null);
   const [loading, setLoading] = useState(true);

@@ -34,7 +34,7 @@ export const Signup = () => {
       <form className="bg-white p-6 rounded-lg shadow-lg w-96" onSubmit={handleSubmit}>
         <h2 className="text-2xl font-bold text-center mb-4">Sign Up</h2>
         {invalid && (
-          <p className="text-red-600 bg-red-100 border border-red-400 rounded p-2 text-center">
+          <p className="text-red-600 mb-5 bg-red-100 border border-red-400 rounded p-2 text-center">
             Passwords do not match
           </p>
         )}

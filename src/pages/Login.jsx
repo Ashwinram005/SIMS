@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../api/info.js'
+import { AppContext } from '../App.jsx';
 
 export const Login = () => {
+  const{setActiveItem}=useContext(AppContext)
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [invalid, setInvalid] = useState(false);
@@ -21,6 +23,8 @@ export const Login = () => {
 
       if (user) {
         setInvalid(false);
+        setActiveItem('ho');
+        localStorage.setItem('activeItem', 'ho');
         navigate('/landing'); // Redirect to landing page
       } else {
         setInvalid(true);
@@ -35,7 +39,7 @@ export const Login = () => {
       <form className="bg-white p-6 rounded-lg shadow-lg w-96" onSubmit={handleSubmit}>
         <h2 className="text-2xl font-bold text-center mb-4">Login</h2>
         {invalid && (
-          <p className="text-red-600 bg-red-100 border border-red-400 rounded p-2 text-center">
+          <p className="text-red-600 mb-5 bg-red-100 border border-red-400 rounded p-2 text-center">
             Invalid username or password
           </p>
         )}
