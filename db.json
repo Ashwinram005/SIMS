@@ -16,9 +16,14 @@
       "password": "T69"
     },
     {
-      "id": "1729737049267",
-      "username": "MURUGAPRAKASH S",
-      "password": "123"
+      "id": "1729761166326",
+      "username": "KUTTY",
+      "password": "tmt"
+    },
+    {
+      "id": 1729873914325,
+      "username": "As",
+      "password": "12"
     }
   ],
   "students": [
@@ -30,7 +35,7 @@
       "department": "cse",
       "mobilenumber": "9344809016",
       "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
-      "email": "dhoni007@csk.com",
+      "email": "MSD007@csk.com",
       "enrollmentDate": "2023-09-04",
       "yearOfStudy": "2",
       "registerNumber": "727723EUCS062"
@@ -40,7 +45,7 @@
       "name": "JEEVAN",
       "dob": "2005-10-28",
       "gender": "male",
-      "department": "cse",
+      "department": "eee",
       "mobilenumber": "9876543210",
       "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
       "email": "jeevangandhi@goat.com",
@@ -248,7 +253,7 @@
       "name": "ASHWINRAM M",
       "dob": "2005-10-28",
       "gender": "male",
-      "department": "aids",
+      "department": "ece",
       "mobilenumber": "9344809016",
       "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
       "email": "ashwinrammohan2005@gmail.com",
@@ -257,30 +262,17 @@
       "registerNumber": "20236731aids6731"
     },
     {
-      "id": "0b53",
-      "name": "JACK SPARROW",
-      "dob": "2005-10-28",
+      "id": "014f",
+      "name": "ASWIN PRANAV R",
+      "dob": "2005-11-29",
       "gender": "male",
       "department": "eee",
       "mobilenumber": "9344809016",
-      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
+      "address": "150C SIVAN KOVIL STREET,THOOTHUKUDI",
       "email": "ashwinrammohan2005@gmail.com",
-      "enrollmentDate": "2023-09-04",
+      "enrollmentDate": "2023-09-02",
       "yearOfStudy": "1",
-      "registerNumber": "20236460eee6460"
-    },
-    {
-      "id": "4794",
-      "name": "LEO DAS A",
-      "dob": "2005-10-28",
-      "gender": "male",
-      "department": "ece",
-      "mobilenumber": "9344809016",
-      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
-      "email": "ashwinrammohan2005@gmail.com",
-      "enrollmentDate": "2023-09-04",
-      "yearOfStudy": "1",
-      "registerNumber": "20233560ece3560"
+      "registerNumber": "20233814eee3814"
     }
   ]
 }
