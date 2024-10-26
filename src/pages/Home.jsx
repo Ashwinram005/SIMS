@@ -70,7 +70,7 @@ export const Home = () => {
   return (
     <div className="relative w-full text-black p-6 bg-gradient-to-r from-blue-50 to-blue-200 min-h-screen">
       <header className="mb-8 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-blue-600">Student Information Analysis</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-blue-900">Student Information Analysis</h1>
         <p className="text-md md:text-lg mt-1 text-gray-700">Analyze student distribution across departments</p>
       </header>
 

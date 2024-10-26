@@ -21,9 +21,19 @@
       "password": "tmt"
     },
     {
-      "id": 1729873914325,
+      "id": "1729873914325",
       "username": "As",
       "password": "12"
+    },
+    {
+      "id": 1729915921113,
+      "username": "HARI VARADHAN N R",
+      "password": "AS"
+    },
+    {
+      "id": 1729918083761,
+      "username": "Dhoni",
+      "password": "ipl007"
     }
   ],
   "students": [
@@ -262,17 +272,17 @@
       "registerNumber": "20236731aids6731"
     },
     {
-      "id": "014f",
-      "name": "ASWIN PRANAV R",
-      "dob": "2005-11-29",
+      "id": "e2f5",
+      "name": "KARTHIKEYA",
+      "dob": "2005-10-28",
       "gender": "male",
-      "department": "eee",
+      "department": "mech",
       "mobilenumber": "9344809016",
-      "address": "150C SIVAN KOVIL STREET,THOOTHUKUDI",
+      "address": "NO 5,SUDALAI MUTHU PILLAI STREET,\nEAST SANTHAPETTAI,\nKAMARAJAR SALAI,\nMADURAI-625009",
       "email": "ashwinrammohan2005@gmail.com",
-      "enrollmentDate": "2023-09-02",
-      "yearOfStudy": "1",
-      "registerNumber": "20233814eee3814"
+      "enrollmentDate": "2024-09-04",
+      "yearOfStudy": "4",
+      "registerNumber": "20245744mct5744"
     }
   ]
 }
